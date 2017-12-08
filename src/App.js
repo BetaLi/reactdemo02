@@ -9,7 +9,21 @@ import Button from 'material-ui/Button';
 
 class App extends Component {
 
-
+render(){
+    const props = {firstName:'Mr', lastName:"li"}
+    const Greeting = (props)=>{
+        return (
+            <div>
+                {props.firstName}.{props.lastName}
+            </div>
+        )
+    };
+    return (
+        <div>
+            <Greeting {...props}/>
+        </div>
+    )
+}
 
 
 
