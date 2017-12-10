@@ -10,26 +10,22 @@ import PropTypes from 'prop-types';
 
 class App extends Component {
 
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick(){
+        this.textInput.focus();
+    }
+    render (){
+        return (
+            <div>
+                <input ref={input => this.textInput = input}/>
+                <Button raised color={'primary'} onClick={this.handleClick}>Focus the input</Button>
+            </div>
+        )
+    }
 
-
-
-
-    // constructor(props){
-    //     super(props);
-    //     this.handleClick = this.handleClick.bind(this);
-    // }
-    // handleClick(){
-    //     this.textInput.focus();
-    // }
-    // render (){
-    //     return (
-    //         <div>
-    //             <input ref={input => this.textInput = input}/>
-    //             <Button raised color={'primary'} onClick={this.handleClick}>Focus the input</Button>
-    //         </div>
-    //     )
-    // }
-    //
 
 
 // render(){
