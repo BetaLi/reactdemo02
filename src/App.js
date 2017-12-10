@@ -4,31 +4,117 @@ import logo from './logo.svg';
 import './App.css';
 //eslint-disable-next-line
 import Button from 'material-ui/Button';
+import PropTypes from 'prop-types';
 
 
 
 class App extends Component {
 
-render(){
-    const props = {firstName:'Mr', lastName:"li"}
-    const Greeting = (props)=>{
-        return (
-            <div>
-                {props.firstName}.{props.lastName}
-            </div>
-        )
-    };
-    return (
-        <div>
-            <Greeting {...props}/>
-        </div>
-    )
-}
+
+
+
+
+    // constructor(props){
+    //     super(props);
+    //     this.handleClick = this.handleClick.bind(this);
+    // }
+    // handleClick(){
+    //     this.textInput.focus();
+    // }
+    // render (){
+    //     return (
+    //         <div>
+    //             <input ref={input => this.textInput = input}/>
+    //             <Button raised color={'primary'} onClick={this.handleClick}>Focus the input</Button>
+    //         </div>
+    //     )
+    // }
+    //
+
+
+// render(){
+//     let textInput = null;
+//     function handleClick(){
+//         textInput.focus();
+//     }
+//     return (
+//         <div>
+//             <input type={'text'} ref={input=>textInput = input}/>
+//             <Button raised color={'primary'} value={'Focus on the input'} onClick={handleClick}>Focus on the input</Button>
+//         </div>
+//     )
+// }
 
 
 
 
 
+
+
+
+//PropTypes类型检查
+//     render(){
+//         function Greeting(props) {
+//             return (
+//                 <div>Hello {props.name}</div>
+//             )
+//         }
+//         Greeting.propTypes={
+//             name: PropTypes.string
+//         };
+//         Greeting.defaultProps={
+//             name:'Stranger'
+//         };
+//         return (
+//             <Greeting name={'Flash'}/>
+//         )
+//     }
+
+
+
+
+    // render(){
+    //     function Repeat(props){
+    //         const item=[];
+    //         for(let i =0; i<props.number;i++){
+    //             item.push(props.children(i));
+    //         }
+    //         return (
+    //             <div>{item}</div>
+    //         )
+    //     }
+    //     function List(){
+    //         return (
+    //             <diV>
+    //                 <Repeat number="10">
+    //                     {(index)=><div key={index}>This is item {index} in List.</div>}
+    //                 </Repeat>
+    //             </diV>
+    //         )
+    //     }
+    //     return (
+    //         <div><List/></div>
+    //     )
+    // }
+
+
+
+
+// render(){
+//     const props = {firstName:'Mr', lastName:"li"}
+//     const Greeting = (props)=>{
+//         return (
+//             <div>
+//                 {props.firstName}.{props.lastName}
+//             </div>
+//         )
+//     };
+//     return (
+//         <div>
+//             <Greeting {...props}/>
+//         </div>
+//     )
+// }
 
 
 
